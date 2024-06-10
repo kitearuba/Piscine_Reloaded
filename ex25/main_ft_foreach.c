@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 16:50:47 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/10 12:43:10 by chrrodri         ###   ########.fr       */
+/*   Created: 2024/06/07 18:10:46 by chrrodri          #+#    #+#             */
+/*   Updated: 2024/06/10 15:17:15 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
+#include "utils.h"
 
-int	*ft_range(int min, int max)
+void	ft_foreach(int *tab, int length, void (*f)(int));
+
+int	main(int argc, char **argv)
 {
-	int	size;
-	int	*array;
+	int	len;
+	int	arr[8] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+	if (argc < 2)
+	{
+		write (2, "Error, wrong input!\n",20);
+		return (1);
+	}
+	len = ft_atoi(argv[1]);
+	ft_foreach(arr, len, &ft_putnbr);
+	return (0);
+}
+
+void ft_foreach(int *tab, int length, void (*f)(int))
+{
 	int	i;
 
-	size = max - min;
 	i = 0;
-	if (min >= max)
-		return (NULL);
-	array = malloc(sizeof(int) * size);
-	if (array == NULL)
+	while (i < length)
 	{
-		write (2, "Memory allocation failed.\n", 27);
-		return (NULL);
-	}
-	while (i < size)
-	{
-		array[i] = min;
-		min++;
+		(*f)(tab[i]);
 		i++;
+		ft_putchar('\n');
 	}
-	return (array);
 }

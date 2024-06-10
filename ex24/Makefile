@@ -1,16 +1,19 @@
-NAME = exe24
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/10 14:00:10 by chrrodri          #+#    #+#              #
+#    Updated: 2024/06/10 14:31:19 by chrrodri         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ex24_make
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
-LIBRARY = libft.a
 SRC = 
-OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $@
-
-$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
-
+OBJ = $ (SRC:%

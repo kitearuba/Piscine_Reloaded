@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 16:50:47 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/10 12:43:10 by chrrodri         ###   ########.fr       */
+/*   Created: 2024/06/06 15:41:51 by chrrodri          #+#    #+#             */
+/*   Updated: 2024/06/10 12:06:24 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
-int	*ft_range(int min, int max)
+int	ft_sqrt(int nb)
 {
-	int	size;
-	int	*array;
-	int	i;
+	int	root;
 
-	size = max - min;
-	i = 0;
-	if (min >= max)
-		return (NULL);
-	array = malloc(sizeof(int) * size);
-	if (array == NULL)
-	{
-		write (2, "Memory allocation failed.\n", 27);
-		return (NULL);
-	}
-	while (i < size)
-	{
-		array[i] = min;
-		min++;
-		i++;
-	}
-	return (array);
+	root = 0;
+	if (nb == 0)
+		return (0);
+	while ((root * root) < nb)
+		root++;
+	if ((root * root) == nb)
+		return (root);
+	else
+		return (0);
 }

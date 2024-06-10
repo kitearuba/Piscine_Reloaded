@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 16:50:47 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/10 12:43:10 by chrrodri         ###   ########.fr       */
+/*   Created: 2024/06/07 18:11:24 by chrrodri          #+#    #+#             */
+/*   Updated: 2024/06/10 17:07:32 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
+#include "utils.h"
 
-int	*ft_range(int min, int max)
+int	ft_check_content(char *str)
+	return (*str != '\0') 
+
+int	ft_count_if(char **tab, int (*f)(char*));
+
+int	main(void)
 {
-	int	size;
-	int	*array;
-	int	i;
+	char *arr[] = {"1", "", "24", "x", "12365", "e3"}; 
+	ft_count_if(arr, &ft_check_content);
+	return (0);
+}
 
-	size = max - min;
+int	ft_count_if(char **tab, int (*f)(char*))
+{
+	int	i;
+	int	counter;
+
 	i = 0;
-	if (min >= max)
-		return (NULL);
-	array = malloc(sizeof(int) * size);
-	if (array == NULL)
+	counter = 0;
+	while (tab[i] != NULL) 
 	{
-		write (2, "Memory allocation failed.\n", 27);
-		return (NULL);
-	}
-	while (i < size)
-	{
-		array[i] = min;
-		min++;
+		if ((*f)(tab[i]) == 1)
+			counter++;
 		i++;
 	}
-	return (array);
-}
+	return (counter);
+count_if}
