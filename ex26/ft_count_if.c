@@ -20,8 +20,11 @@ int	ft_count_if(char **tab, int (*f)(char*));
 
 int	main(void)
 {
+	int	count;
+
 	char *arr[] = {"1", "", "24", "x", "12365", "e3"}; 
-	ft_count_if(arr, &ft_check_content);
+	count = ft_count_if(arr, &ft_check_content);
+	ft_putnbr(&count);
 	return (0);
 }
 
@@ -39,4 +42,4 @@ int	ft_count_if(char **tab, int (*f)(char*))
 		i++;
 	}
 	return (counter);
-count_if}
+}
