@@ -23,7 +23,7 @@ int	*ft_range(int min, int max)
 	i = 0;
 	if (min >= max)
 		return (NULL);
-	array = malloc(sizeof(int) * size);
+	array = (int *)malloc(sizeof(int) * size);
 	if (array == NULL)
 	{
 		write (2, "Memory allocation failed.\n", 27);
