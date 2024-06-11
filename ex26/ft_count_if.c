@@ -10,24 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
-
-// Function prototype for ft_count_if
-int ft_count_if(char **tab, int (*f)(char*));
+##include <unistd.h>
 
 // Function that checks if the string contains only digits
 int ft_is_digit_only(char *str)
 {
-    int i = 0;
+    int i;
 
+    i = 0;
     if (str[i] == '\0')
         return (0);
-
     while (str[i] != '\0')
     {
-        if (!isdigit(str[i]))
+        if (str[i] < '0' || str[i] > '9')
             return (0);
         i++;
     }
@@ -42,19 +37,21 @@ int ft_count_if(char **tab, int (*f)(char*))
 
     i = 0;
     counter = 0;
-    while (tab[i] != NULL)
+    while (tab[i] != 0)
     {
-        if ((*f)(tab[i]) == 1)
+        if (f(tab[i]) == 1)
             counter++;
         i++;
     }
     return (counter);
 }
 
+// Main function for testing
 int main(void)
 {
-    char *arr[] = {"1", "", "24", "x", "12365", "e3", NULL}; 
-    int count = ft_count_if(arr, &ft_is_digit_only);
-    printf("Count of digit-only strings: %d\n", count);
-    return (0);
+    char *arr[] = {"1", "", "24", "x", "12365", "e3", 0}; 
+    int count;
+
+    count = ft_count_if(arr, &ft_is_digit_only);
+    return (count);
 }
