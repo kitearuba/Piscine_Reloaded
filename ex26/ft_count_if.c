@@ -13,7 +13,10 @@
 #include <unistd.h>
 #include <stdio.h>
 
-// Function that checks if the string is non-empty
+// Function prototype for ft_count_if
+int ft_count_if(char **tab, int (*f)(char*));
+
+// Example function that checks if the string is non-empty
 int ft_check_content(char *str)
 {
     return (*str != '\0');
@@ -40,6 +43,6 @@ int main(void)
 {
     char *arr[] = {"1", "", "24", "x", "12365", "e3", NULL}; 
     int count = ft_count_if(arr, &ft_check_content);
-    printf("Count: %d\n", count);
+    printf("Count of non-empty strings: %d\n", count);
     return (0);
 }
