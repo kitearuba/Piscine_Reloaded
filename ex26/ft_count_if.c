@@ -6,7 +6,7 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:11:24 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/11 15:19:23 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/11 19:46:04 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_count_if(char **tab, int (*f)(char*))
 
 	i = 0;
 	counter = 0;
-	while (*tab) 
+	while (*tab)
 	{
 		if ((*f)(*tab) == 1)
 			counter++;

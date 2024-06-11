@@ -6,15 +6,13 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 15:16:11 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/07 16:47:08 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:45:04 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include "utils.h"
-
-void	putstr(char *str);
 
 void	ft_putchar(char c);
 
@@ -38,20 +36,25 @@ int	main(int argc, char **argv)
 
 char	*ft_strdup(char *src)
 {
-	int		i;
 	char	*target;
+	int		len;
+	int		i;
 
+	len = 0;
 	i = 0;
-	target = malloc (sizeof(char) * sizeof(src));
+	while (src[len] != '\0')
+		len++;
+	target = (char *)malloc (sizeof(char) * (len + 1));
 	if (target == NULL)
 	{
 		write(2, "Memory allocation failed.\n", 26);
-		return ("1");
+		return (NULL);
 	}
 	while (src[i] != '\0')
 	{
 		target[i] = src[i];
 		i++;
 	}
+	target[i] = '\0';
 	return (target);
 }

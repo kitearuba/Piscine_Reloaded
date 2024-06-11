@@ -6,7 +6,7 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:40:00 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/10 18:25:30 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/11 19:44:49 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,10 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
 void	ft_sort_params(char *str)
 {
-	int		i, j;
+	int		i;
+	int		j;
 	char	tmp;
 
 	i = 0;
@@ -62,10 +58,6 @@ void	ft_sort_params(char *str)
 		i++;
 		j = 0;
 	}
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	while (*str)
+		ft_putchar(*str++);
 }

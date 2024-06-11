@@ -6,7 +6,7 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:05:20 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/07 14:34:14 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:01:09 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	return (0);
-}
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
 }
 
 void	ft_print_params(char *str)

@@ -6,30 +6,28 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 15:16:11 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/07 16:48:54 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:47:30 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 
-int ft_strlen(char *str)
-{
-    int length = 0;
-    while (str[length] != '\0')
-        length++;
-    return length;
-}
+void	ft_putchar(char c);
+
+char	*ft_strdup(char *src);
 
 char	*ft_strdup(char *src)
 {
-	int		i;
 	char	*target;
-	int	length;
+	int		len;
+	int		i;
 
-	length = ft_strlen(src);
+	len = 0;
 	i = 0;
-	target = (char *)malloc (sizeof(char) * (length + 1));
+	while (src[len] != '\0')
+		len++;
+	target = (char *)malloc (sizeof(char) * (len + 1));
 	if (target == NULL)
 	{
 		write(2, "Memory allocation failed.\n", 26);

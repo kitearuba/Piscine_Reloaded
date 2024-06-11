@@ -6,13 +6,13 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 10:26:30 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/06 10:29:03 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/11 19:41:43 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	div = a / b;
 	mod = a % b;
