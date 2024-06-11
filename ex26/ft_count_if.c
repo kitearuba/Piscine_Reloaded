@@ -11,35 +11,35 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "utils.h"
+#include <stdio.h>
 
-int	ft_check_content(char *str)
-	return (*str != '\0') 
-
-int	ft_count_if(char **tab, int (*f)(char*));
-
-int	main(void)
+// Function that checks if the string is non-empty
+int ft_check_content(char *str)
 {
-	int	count;
-
-	char *arr[] = {"1", "", "24", "x", "12365", "e3"}; 
-	count = ft_count_if(arr, &ft_check_content);
-	ft_putnbr(&count);
-	return (0);
+    return (*str != '\0');
 }
 
-int	ft_count_if(char **tab, int (*f)(char*))
+// Function that counts how many strings in the array return 1 when passed to f
+int ft_count_if(char **tab, int (*f)(char*))
 {
-	int	i;
-	int	counter;
+    int i;
+    int counter;
 
-	i = 0;
-	counter = 0;
-	while (tab[i] != NULL) 
-	{
-		if ((*f)(tab[i]) == 1)
-			counter++;
-		i++;
-	}
-	return (counter);
+    i = 0;
+    counter = 0;
+    while (tab[i] != NULL)
+    {
+        if ((*f)(tab[i]) == 1)
+            counter++;
+        i++;
+    }
+    return (counter);
+}
+
+int main(void)
+{
+    char *arr[] = {"1", "", "24", "x", "12365", "e3", NULL}; 
+    int count = ft_count_if(arr, &ft_check_content);
+    printf("Count: %d\n", count);
+    return (0);
 }
