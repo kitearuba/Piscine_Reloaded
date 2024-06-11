@@ -1,0 +1,22 @@
+Task for candidates: Imagine that you joined TikTok team as support agent. On your first day, you're receiving the ticket with the following question from the advertiser and need to find the correct answer only using https://ads.tiktok.com/help/ and craft a compelling response. 
+
+In your response, please use complete sentences, as we want to see how you respond. Also, for each response, please provide the webpage link where you found the information to use in your response.  (Or multiple pages)
+
+
+Question 1:
+What are 2 ways to preview ads on TikTok Ads Manager? 
+Response:
+
+Dear (Customer Name),
+
+My name is Christian, and I am a member of the TikTok Support Team. I'm here to assist you with your inquiries today. Currently, you can preview your ads on TikTok Ads Manager or on your mobile device. In the Ads Manager, after creating your ad, a preview box shows how the ad looks. You can switch between app and ad format previews there. For mobile previews, you can generate a QR code in the Ads Manager and scan it with your TikTok app to see how the ad appears in the feed or you can use a User ID to access this option. 
+For a detailed step by step explanation of the process, please refer to the following link from the TikTok Business Help Center: 
+
+https://ads.tiktok.com/help/article/preview-ads?lang=en
+
+Should you require further assistance or have more questions, please do not hesitate to reach out to us again.
+
+Warm regards,
+
+Christian
+TikTok Support Team

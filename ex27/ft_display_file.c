@@ -15,7 +15,7 @@
 
 #define BUFFER_SIZE 4096
 
-void display_file(const char *filename)
+void	display_file(const char *filename)
 {
     int fd;
     char buffer[BUFFER_SIZE];
@@ -36,7 +36,7 @@ void display_file(const char *filename)
     close(fd);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
     if (argc < 2)
     {
@@ -54,6 +54,3 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-
-
-
