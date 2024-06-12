@@ -6,14 +6,14 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 19:30:56 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/12 14:08:34 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 15:05:43 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
 
-#define BUFFER_SIZE 1000
+#define BUFFER_SIZE 100
 
 void	display_file(const char *filename)
 {
@@ -30,10 +30,8 @@ void	display_file(const char *filename)
 	b_read = read(file, buf, BUFFER_SIZE);
 	while (b_read > 0)
 	{
-		if (b_read <= 0)
-			break;
-		else
-			write(1, buf, b_read);
+		write(1, buf, b_read);
+		b_read = read(file, buf, BUFFER_SIZE);
 	}
 	close(file);
 }

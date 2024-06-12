@@ -6,7 +6,7 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:05:20 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/10 18:01:09 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 18:11:35 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	main(int argc, char **argv)
 	i = 1;
 	if (argc < 2)
 	{
-		write(2, "Error, wrong input!\n", 20);
 		return (1);
 	}
 	while (argv[i] != NULL)

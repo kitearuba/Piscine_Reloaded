@@ -6,7 +6,7 @@
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:50:47 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/11 13:49:57 by chrrodri         ###   ########.fr       */
+/*   Updated: 2024/06/12 18:15:55 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	*ft_range(int min, int max)
 	array = (int *)malloc(sizeof(int) * size);
 	if (array == NULL)
 	{
-		write (2, "Memory allocation failed.\n", 27);
 		return (NULL);
 	}
 	while (i < size)
