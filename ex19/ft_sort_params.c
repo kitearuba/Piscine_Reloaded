@@ -5,58 +5,67 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 14:40:00 by chrrodri          #+#    #+#             */
-/*   Updated: 2024/06/12 18:13:30 by chrrodri         ###   ########.fr       */
+/*   Created: 2024/06/12 19:31:39 by chrrodri          #+#    #+#             */
+/*   Updated: 2024/06/12 19:32:51 by chrrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
 
-void	ft_sort_params(char *str);
+void	ft_putstr(char *str)
+{
+	int		i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
+
+void	swap(char **s1, char **s2)
+{
+	char	*temp;
+
+	temp = *s1;
+	*s1 = *s2;
+	*s2 = temp;
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int		i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
 
 int	main(int argc, char **argv)
 {
-	int	i;
+	int		i;
+	int		j;
 
 	i = 1;
-	if (argc < 2)
+	while (i < argc)
 	{
-		return (1);
+		j = 1;
+		while (j + 1 < argc)
+		{
+			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
+				swap(&argv[j], &argv[j + 1]);
+			j++;
+		}
+		i++;
 	}
-	while (argv[i] != NULL)
+	i = 1;
+	while (i < argc)
 	{
-		ft_sort_params(argv[i]);
+		ft_putstr(argv[i]);
 		ft_putchar('\n');
 		i++;
 	}
 	return (0);
-}
-
-void	ft_sort_params(char *str)
-{
-	int		i;
-	int		j;
-	char	tmp;
-
-	i = 0;
-	j = 0;
-	while (str[i] != '\0')
-	{
-		while (str[j] != '\0')
-		{
-			if (str[i] < str[j])
-			{
-				tmp = str[i];
-				str[i] = str[j];
-				str[j] = tmp;
-			}
-			j++;
-		}
-		i++;
-		j = 0;
-	}
-	while (*str)
-		ft_putchar(*str++);
 }
