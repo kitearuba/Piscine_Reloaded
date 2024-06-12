@@ -1,1 +1,1 @@
-find . -type f -name "*.sh# -exec basename{}\; | sed "s/\.sh//"
+find . -name "*.sh" -print | rev | cut -d. -f2- | cut -d/ -f1 | rev
