@@ -26,3 +26,21 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (nb);
 }
+
+int	ft_iterative_factorial(int nb)
+{
+	int		res;
+
+	res = 1;
+	if (nb > 12 || nb < 0)
+		return (0);
+	else
+	{
+		while (nb > 0)
+		{
+			res *= nb;
+			nb--;
+		}
+		return (res);
+	}
+}
