@@ -14,21 +14,6 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int	result;
-	int	i;
-
-	result = nb - 1;
-	i = 0;
-	while (result != 0)
-	{
-		nb *= result;
-		result--;
-	}
-	return (nb);
-}
-
-int	ft_iterative_factorial(int nb)
-{
 	int		res;
 
 	res = 1;
