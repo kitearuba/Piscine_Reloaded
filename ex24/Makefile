@@ -6,32 +6,31 @@
 #    By: chrrodri <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 14:00:10 by chrrodri          #+#    #+#              #
-#    Updated: 2024/06/12 19:40:25 by chrrodri         ###   ########.fr        #
+#    Updated: 2024/06/13 10:39:50 by chrrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC_PATH = srcs/
-SRC_NAME = ft_putchar.c ft_putstr.c ft_strcmp.c ft_strlen.c ft_swap.c
-SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
-HEADER = -Iincludes
+SRC_DIR = srcs
+INC_DIR = includes
+SRCS = $(SRC_DIR)/ft_putchar.c $(SRC_DIR)/ft_putstr.c $(SRC_DIR)/ft_strcmp.c $(SRC_DIR)/ft_strlen.c $(SRC_DIR)/ft_swap.c
 OBJ = $(SRC:.c=.o)
-
-.PHONY: all, clean, fclean, re
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-
-%.o: $(SRC_PATH)%.c
-	gcc -Werror -Wall -Wextra $(HEADER) -c $<
+%.o: %.c
+	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all%      
+re: fclean all
+
+.PHONY: all, clean, fclean, re
