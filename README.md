@@ -36,8 +36,8 @@ This repository includes all exercises from the Piscine Reloaded project, aimed 
 27. **Exercise 26: ft_count_if**
 28. **Exercise 27: display_file**
 
-### Subjects Folder
-Included in this repository is a folder named `subjects` containing the subject PDF for the Piscine Reloaded. This document provides detailed instructions and requirements for each exercise and project.
+### Subject PDF
+Included in this repository is the subject PDF for the Piscine Reloaded. This document provides detailed instructions and requirements for each exercise and project.
 
 ## Repository Structure
 
