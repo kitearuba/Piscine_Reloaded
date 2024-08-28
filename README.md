@@ -1,11 +1,26 @@
-# Piscine Reloaded Repository
+---
 
-Welcome to my Piscine Reloaded repository! This repository contains all the exercises and projects I completed for the Piscine Reloaded, finished on June 12. Below, you'll find an overview of what is included in this repository.
+# 🏊‍♂️ **Piscine Reloaded Repository**  
+![42 Project](https://img.shields.io/badge/42-Project-blue?style=flat-square) ![C Programming](https://img.shields.io/badge/Language-C-brightgreen?style=flat-square)
 
-## Contents
+Welcome to my **Piscine Reloaded** repository! This repository contains all the exercises and projects I completed during the **Piscine Reloaded** program, which concluded on **June 12**. Below, you'll find an overview of the repository structure, contents, and some additional information about contributing and acknowledgments.
 
-### Exercises
-This repository includes all exercises from the Piscine Reloaded project, aimed at reinforcing the basics of C programming learned during the initial Piscine.
+---
+
+## 📑 **Table of Contents**
+
+1. [📚 Exercises](#-exercises)
+2. [📂 Subject PDF](#-subject-pdf)
+3. [🗂️ Repository Structure](#%EF%B8%8F-repository-structure)
+4. [🔧 Contributing](#-contributing)
+5. [🙌 Acknowledgements](#-acknowledgements)
+6. [👨‍💻 Author](#-author)
+
+---
+
+## 📚 **Exercises**
+
+The repository includes all the exercises from the **Piscine Reloaded** project, which were designed to reinforce the core principles of C programming. These exercises helped solidify the knowledge I gained during the initial Piscine at **42 School**. Below is a summary of the exercises:
 
 1. **Exercise 00: Oh yeah, mooore...**
 2. **Exercise 01: Z**
@@ -36,12 +51,21 @@ This repository includes all exercises from the Piscine Reloaded project, aimed 
 27. **Exercise 26: ft_count_if**
 28. **Exercise 27: display_file**
 
-### Subject PDF
-Included in this repository is the subject PDF for the Piscine Reloaded. This document provides detailed instructions and requirements for each exercise and project.
+Each of these exercises addresses specific concepts in **C programming**, such as loops, conditions, recursion, strings, memory allocation, and much more.
 
-## Repository Structure
+---
 
-```
+## 📂 **Subject PDF**
+
+This repository includes the **Piscine Reloaded** subject PDF, which provides detailed instructions and requirements for each exercise and project. The document is available in the `subjects` folder for reference.
+
+---
+
+## 🗂️ **Repository Structure**
+
+The repository is organized in a clear and systematic way, making it easy to navigate through the different exercises and projects. Here is an outline of the structure:
+
+```bash
 .
 ├── ex00
 │   ├── ex00.tar
@@ -132,13 +156,41 @@ Included in this repository is the subject PDF for the Piscine Reloaded. This do
     └── ...
 ```
 
-## Contributing
+Each folder corresponds to an exercise, and inside each folder, you'll find the source files or scripts related to that particular exercise. The `subjects` folder contains the official document that outlines the requirements and details for each project.
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+---
 
-## Acknowledgements
+## 🔧 **Contributing**
 
-- Thanks to 42 for providing such an intensive and rewarding learning experience.
-- Special thanks to my peers for their support and collaboration.
+Contributions are always welcome! If you encounter any issues, have suggestions for improvements, or want to add additional exercises, feel free to contribute. Here’s how you can help:
 
-Feel free to explore the repository, and I hope you find the exercises and projects as interesting and challenging as I did. Happy coding!
+- **Report Bugs**: If you spot an issue, open an issue on GitHub to report it.
+- **Submit Pull Requests**: If you have improvements or bug fixes, feel free to fork the repository, make your changes, and submit a pull request.
+
+Let’s work together to enhance this repository and improve it for future learners!
+
+---
+
+## 🙌 **Acknowledgements**
+
+I want to express my gratitude to:
+- **42 School**: For providing such an intensive and rewarding learning experience.
+- **My peers**: For their ongoing support and collaboration throughout this journey.
+
+These experiences have been invaluable in shaping my understanding of programming and problem-solving. 
+
+---
+
+## 👨‍💻 **Author**
+
+**chrrodri**  
+_42 Barcelona_  
+[GitHub Profile](https://github.com/kitearuba)
+
+---
+
+## 🎉 **Final Thoughts**
+
+Thank you for visiting my **Piscine Reloaded** repository! I hope you find the exercises and projects insightful, and that they help you as much as they helped me in building a strong foundation in **C programming**. Feel free to explore, contribute, and, most importantly, keep coding! 🚀
+
+---
